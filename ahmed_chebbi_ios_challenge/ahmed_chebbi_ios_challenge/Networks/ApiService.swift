@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RxSwift
+
 open class ApiService {
     
     enum Constants: String {
@@ -35,12 +35,7 @@ open class ApiService {
 
 
         }
-        
-        enum Params: String {
-            case banks = "banks"
-            case version = "v2"
-        }
-        
+
         enum QueryData: String {
             case after = "after"
             case limit = "limit"

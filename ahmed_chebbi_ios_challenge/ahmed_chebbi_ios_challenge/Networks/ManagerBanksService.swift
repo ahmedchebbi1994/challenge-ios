@@ -6,62 +6,65 @@
 //
 
 import Foundation
-import RxSwift
-
-private typealias responseBanksDataCallBack = ( (Bool, ResponseListBanks?) -> Void )
 
 
 protocol BanksServiceProtocol {
-    func fetchAllBanks(path: String?) -> Observable<ResponseListBanks>
+    func fetchAllBanks(path: String?, completion: @escaping (([Resource]) -> Void))
 }
 
-final class ManagerBankservice: ApiService, BanksServiceProtocol {
-
+final class ManagerBanksService: ApiService, BanksServiceProtocol {
     
-    static let shared = ManagerBankservice()
     
-    let disposeBag = DisposeBag()
+    static let shared = ManagerBanksService()
     
- 
-    func fetchAllBanks(path: String? = nil) -> Observable<ResponseListBanks> {
-        return Observable.create {  observer -> Disposable in
-            //?limit=100&client_id=dd6696c38b5148059ad9dedb408d6c84&client_secret=56uolm946ktmLTqNMIvfMth4kdiHpiQ5Yo8lT4AFR0aLRZxkxQWaGhLDHXeda6DZ
-            let params = [
-                Path.QueryData.clientId.rawValue : Path.QueryData.clientIdValue.rawValue,
-                Path.QueryData.clientSecret.rawValue : Path.QueryData.clientSecretValue.rawValue,
-            ]
-            
-            var banksList: String = Path.BaseUrl.path.rawValue + Path.BaseUrl.subPath.rawValue
-            if let path = path {
-                banksList =  Path.BaseUrl.path.rawValue + path
-            }
-            
-            if let request = self.configureRequest(parameters: params, url: URL(string: banksList)!, requestType: .get) {
-                let task = URLSession.shared.dataTask(with: request) { data, response , error in
-                    if let httpResponse = response as? HTTPURLResponse {
-                        let decoder = JSONDecoder()
-                        guard let data = data, (httpResponse.statusCode == 200), let response = try? decoder.decode(ResponseListBanks.self, from: data) else {
-                            observer.onError(NSError(domain: "Error JSON or Network", code: httpResponse.statusCode, userInfo: nil))
-                            return
-                        }
-                        observer.onNext(response)
-                        observer.onCompleted()
-                        return
-                    } else {
-                        observer.onError(NSError(domain: "Error Network", code: 404 , userInfo: nil))
-                    }
+    
+    
+    
+    
+    func fetchAllBanks(path: String?, completion: @escaping (([Resource]) -> Void)) {
+        
+        loadData { (isValid, response) in
+            if isValid {
+                if let resources = response?.resources {
+                    completion(resources)
                 }
-                task.resume()
-                return Disposables.create{
-                    task.cancel()
-                }
-            }
-            return Disposables.create{
+            } else {
+                completion([])
             }
         }
         
     }
     
- 
+    fileprivate func loadData(path: String? = nil,completion: @escaping ( (Bool, ResponseListBanks?) -> Void )) {
+        let params = [
+            Path.QueryData.clientId.rawValue : Path.QueryData.clientIdValue.rawValue,
+            Path.QueryData.clientSecret.rawValue : Path.QueryData.clientSecretValue.rawValue,
+        ]
+        var banksList: String = Path.BaseUrl.path.rawValue + Path.BaseUrl.subPath.rawValue
+        if let path = path {
+            banksList =  Path.BaseUrl.path.rawValue + path
+        }
+        if let request = self.configureRequest(parameters: params, url: URL(string: banksList)!, requestType: .get) {
+            let task = URLSession.shared.dataTask(with: request) { data, response , error in
+                if let httpResponse = response as? HTTPURLResponse {
+                    let decoder = JSONDecoder()
+                    guard let data = data, (httpResponse.statusCode == 200), let response = try? decoder.decode(ResponseListBanks.self, from: data) else {
+                        completion(false,nil)
+                        return
+                    }
+                    completion(true,response)
+
+                } else {
+                    completion(false,nil)
+                }
+            }
+            task.resume()
+        }
+        
+    }
+    
+    
+    
+    
     
 }
