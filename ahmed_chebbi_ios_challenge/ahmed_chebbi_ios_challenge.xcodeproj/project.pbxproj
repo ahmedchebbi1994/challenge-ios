@@ -13,6 +13,7 @@
 		729AA70126093388008D7C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70026093388008D7C8D /* Assets.xcassets */; };
 		729AA70426093388008D7C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70226093388008D7C8D /* LaunchScreen.storyboard */; };
 		729AA7132609344D008D7C8D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7122609344D008D7C8D /* AppCoordinator.swift */; };
+		A14875E6ACCBA33426DF8191 /* Pods_ahmed_chebbi_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C657CDBDCC79801870D337 /* Pods_ahmed_chebbi_ios_challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		729AA70326093388008D7C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729AA70526093388008D7C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729AA7122609344D008D7C8D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		93C657CDBDCC79801870D337 /* Pods_ahmed_chebbi_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ahmed_chebbi_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7485F4D46BEBBF2B5D30E50 /* Pods-ahmed_chebbi_ios_challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahmed_chebbi_ios_challenge.debug.xcconfig"; path = "Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		CDD68AD68F980E57CD0D4960 /* Pods-ahmed_chebbi_ios_challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahmed_chebbi_ios_challenge.release.xcconfig"; path = "Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14875E6ACCBA33426DF8191 /* Pods_ahmed_chebbi_ios_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				729AA6F326093387008D7C8D /* ahmed_chebbi_ios_challenge */,
 				729AA6F226093387008D7C8D /* Products */,
+				9248006E48D518521C094893 /* Pods */,
+				C8E5987E932E181D7897CB0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9248006E48D518521C094893 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7485F4D46BEBBF2B5D30E50 /* Pods-ahmed_chebbi_ios_challenge.debug.xcconfig */,
+				CDD68AD68F980E57CD0D4960 /* Pods-ahmed_chebbi_ios_challenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8E5987E932E181D7897CB0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93C657CDBDCC79801870D337 /* Pods_ahmed_chebbi_ios_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 729AA70826093388008D7C8D /* Build configuration list for PBXNativeTarget "ahmed_chebbi_ios_challenge" */;
 			buildPhases = (
+				6387FD0EA4699FDF391573BA /* [CP] Check Pods Manifest.lock */,
 				729AA6ED26093387008D7C8D /* Sources */,
 				729AA6EE26093387008D7C8D /* Frameworks */,
 				729AA6EF26093387008D7C8D /* Resources */,
+				F494E4F21D37B1D1B59A8857 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6387FD0EA4699FDF391573BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ahmed_chebbi_ios_challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F494E4F21D37B1D1B59A8857 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		729AA6ED26093387008D7C8D /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		729AA70926093388008D7C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7485F4D46BEBBF2B5D30E50 /* Pods-ahmed_chebbi_ios_challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		729AA70A26093388008D7C8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD68AD68F980E57CD0D4960 /* Pods-ahmed_chebbi_ios_challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
