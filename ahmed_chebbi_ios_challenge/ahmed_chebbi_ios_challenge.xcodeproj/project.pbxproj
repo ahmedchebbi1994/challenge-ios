@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,15 @@
 		729AA70126093388008D7C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70026093388008D7C8D /* Assets.xcassets */; };
 		729AA70426093388008D7C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70226093388008D7C8D /* LaunchScreen.storyboard */; };
 		729AA7132609344D008D7C8D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7122609344D008D7C8D /* AppCoordinator.swift */; };
+		729AA7242609373B008D7C8D /* ResponseListBanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7232609373B008D7C8D /* ResponseListBanks.swift */; };
+		729AA72726093770008D7C8D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA72626093770008D7C8D /* Pagination.swift */; };
+		729AA72A2609378B008D7C8D /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7292609378B008D7C8D /* Resource.swift */; };
+		729AA72D26093855008D7C8D /* ParentBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA72C26093855008D7C8D /* ParentBank.swift */; };
+		729AA7302609387B008D7C8D /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA72F2609387B008D7C8D /* Bank.swift */; };
+		729AA733260938F5008D7C8D /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA732260938F5008D7C8D /* Form.swift */; };
+		729AA73926093997008D7C8D /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA73826093997008D7C8D /* Payment.swift */; };
+		729AA73C260939CF008D7C8D /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA73B260939CF008D7C8D /* ApiService.swift */; };
+		729AA73F26093BEF008D7C8D /* ManagerBanksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA73E26093BEF008D7C8D /* ManagerBanksService.swift */; };
 		A14875E6ACCBA33426DF8191 /* Pods_ahmed_chebbi_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C657CDBDCC79801870D337 /* Pods_ahmed_chebbi_ios_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +34,15 @@
 		729AA70326093388008D7C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		729AA70526093388008D7C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729AA7122609344D008D7C8D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		729AA7232609373B008D7C8D /* ResponseListBanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseListBanks.swift; sourceTree = "<group>"; };
+		729AA72626093770008D7C8D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		729AA7292609378B008D7C8D /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		729AA72C26093855008D7C8D /* ParentBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentBank.swift; sourceTree = "<group>"; };
+		729AA72F2609387B008D7C8D /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		729AA732260938F5008D7C8D /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		729AA73826093997008D7C8D /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		729AA73B260939CF008D7C8D /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		729AA73E26093BEF008D7C8D /* ManagerBanksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerBanksService.swift; sourceTree = "<group>"; };
 		93C657CDBDCC79801870D337 /* Pods_ahmed_chebbi_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ahmed_chebbi_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7485F4D46BEBBF2B5D30E50 /* Pods-ahmed_chebbi_ios_challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahmed_chebbi_ios_challenge.debug.xcconfig"; path = "Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD68AD68F980E57CD0D4960 /* Pods-ahmed_chebbi_ios_challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ahmed_chebbi_ios_challenge.release.xcconfig"; path = "Target Support Files/Pods-ahmed_chebbi_ios_challenge/Pods-ahmed_chebbi_ios_challenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +81,7 @@
 		729AA6F326093387008D7C8D /* ahmed_chebbi_ios_challenge */ = {
 			isa = PBXGroup;
 			children = (
+				729AA71F2609367E008D7C8D /* Networks */,
 				729AA6F826093387008D7C8D /* ViewController.swift */,
 				729AA70F260933E6008D7C8D /* Resources */,
 				729AA6F426093387008D7C8D /* AppDelegate.swift */,
@@ -82,13 +101,44 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		729AA71F2609367E008D7C8D /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				729AA721260936E9008D7C8D /* Responses */,
+				729AA7202609368D008D7C8D /* Models */,
+				729AA73B260939CF008D7C8D /* ApiService.swift */,
+				729AA73E26093BEF008D7C8D /* ManagerBanksService.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		729AA7202609368D008D7C8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				729AA72626093770008D7C8D /* Pagination.swift */,
+				729AA7292609378B008D7C8D /* Resource.swift */,
+				729AA72C26093855008D7C8D /* ParentBank.swift */,
+				729AA72F2609387B008D7C8D /* Bank.swift */,
+				729AA732260938F5008D7C8D /* Form.swift */,
+				729AA73826093997008D7C8D /* Payment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		729AA721260936E9008D7C8D /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				729AA7232609373B008D7C8D /* ResponseListBanks.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		9248006E48D518521C094893 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B7485F4D46BEBBF2B5D30E50 /* Pods-ahmed_chebbi_ios_challenge.debug.xcconfig */,
 				CDD68AD68F980E57CD0D4960 /* Pods-ahmed_chebbi_ios_challenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +263,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729AA7242609373B008D7C8D /* ResponseListBanks.swift in Sources */,
+				729AA72D26093855008D7C8D /* ParentBank.swift in Sources */,
 				729AA7132609344D008D7C8D /* AppCoordinator.swift in Sources */,
 				729AA6F926093387008D7C8D /* ViewController.swift in Sources */,
+				729AA72726093770008D7C8D /* Pagination.swift in Sources */,
 				729AA6F526093387008D7C8D /* AppDelegate.swift in Sources */,
+				729AA73C260939CF008D7C8D /* ApiService.swift in Sources */,
+				729AA7302609387B008D7C8D /* Bank.swift in Sources */,
+				729AA73F26093BEF008D7C8D /* ManagerBanksService.swift in Sources */,
+				729AA733260938F5008D7C8D /* Form.swift in Sources */,
 				729AA6FF26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld in Sources */,
+				729AA73926093997008D7C8D /* Payment.swift in Sources */,
+				729AA72A2609378B008D7C8D /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
