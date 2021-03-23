@@ -38,6 +38,8 @@ class BanksListViewModelSpec: XCTestCase {
     func testCheckBanksListViewModel(){
         viewModel.fetchAllBanks { (resourcesViewModel) in
             XCTAssertEqual(resourcesViewModel.count, 1)
+            XCTAssertEqual(resourcesViewModel.first?.displayCountryName ?? "", "# France 🇫🇷")
+            XCTAssertNotEqual(resourcesViewModel.first?.displayBanks.first?.displayBankName ?? "", "BNP Paris bas")
         }
     }
     
