@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		729AA6F526093387008D7C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA6F426093387008D7C8D /* AppDelegate.swift */; };
-		729AA6FF26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 729AA6FD26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld */; };
 		729AA70126093388008D7C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70026093388008D7C8D /* Assets.xcassets */; };
 		729AA70426093388008D7C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729AA70226093388008D7C8D /* LaunchScreen.storyboard */; };
 		729AA7132609344D008D7C8D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7122609344D008D7C8D /* AppCoordinator.swift */; };
@@ -36,12 +35,25 @@
 		729AA78326096642008D7C8D /* MTAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA78226096642008D7C8D /* MTAPIClient.swift */; };
 		729AA78826097552008D7C8D /* Wording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA78726097552008D7C8D /* Wording.swift */; };
 		729AA794260976BE008D7C8D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 729AA796260976BE008D7C8D /* Localizable.strings */; };
+		729AA7B126098340008D7C8D /* ahmed_chebbi_ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7B026098340008D7C8D /* ahmed_chebbi_ios_challengeTests.swift */; };
+		729AA7BB26098369008D7C8D /* BanksListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7BA26098369008D7C8D /* BanksListViewModelSpec.swift */; };
+		729AA7BF260983A2008D7C8D /* MockBanksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AA7BE260983A2008D7C8D /* MockBanksService.swift */; };
+		729AA7CC2609EA87008D7C8D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 729AA7CB2609EA87008D7C8D /* README.md */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		729AA7B326098340008D7C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 729AA6E926093387008D7C8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 729AA6F026093387008D7C8D;
+			remoteInfo = ahmed_chebbi_ios_challenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		729AA6F126093387008D7C8D /* ahmed_chebbi_ios_challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ahmed_chebbi_ios_challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729AA6F426093387008D7C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		729AA6FE26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ahmed_chebbi_ios_challenge.xcdatamodel; sourceTree = "<group>"; };
 		729AA70026093388008D7C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729AA70526093388008D7C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729AA7122609344D008D7C8D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -73,10 +85,23 @@
 		729AA798260976CF008D7C8D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		729AA799260976CF008D7C8D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		729AA79B260976E1008D7C8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		729AA7AE26098340008D7C8D /* ahmed_chebbi_ios_challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ahmed_chebbi_ios_challengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		729AA7B026098340008D7C8D /* ahmed_chebbi_ios_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahmed_chebbi_ios_challengeTests.swift; sourceTree = "<group>"; };
+		729AA7B226098340008D7C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		729AA7BA26098369008D7C8D /* BanksListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksListViewModelSpec.swift; sourceTree = "<group>"; };
+		729AA7BE260983A2008D7C8D /* MockBanksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBanksService.swift; sourceTree = "<group>"; };
+		729AA7CB2609EA87008D7C8D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		729AA6EE26093387008D7C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729AA7AB26098340008D7C8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -89,7 +114,9 @@
 		729AA6E826093387008D7C8D = {
 			isa = PBXGroup;
 			children = (
+				729AA7CB2609EA87008D7C8D /* README.md */,
 				729AA6F326093387008D7C8D /* ahmed_chebbi_ios_challenge */,
+				729AA7AF26098340008D7C8D /* ahmed_chebbi_ios_challengeTests */,
 				729AA6F226093387008D7C8D /* Products */,
 				C8E5987E932E181D7897CB0E /* Frameworks */,
 			);
@@ -99,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				729AA6F126093387008D7C8D /* ahmed_chebbi_ios_challenge.app */,
+				729AA7AE26098340008D7C8D /* ahmed_chebbi_ios_challengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +149,6 @@
 		729AA70F260933E6008D7C8D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				729AA6FD26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld */,
 				729AA70026093388008D7C8D /* Assets.xcassets */,
 				729AA70226093388008D7C8D /* LaunchScreen.storyboard */,
 				729AA70526093388008D7C8D /* Info.plist */,
@@ -220,6 +247,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		729AA7AF26098340008D7C8D /* ahmed_chebbi_ios_challengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				729AA7B026098340008D7C8D /* ahmed_chebbi_ios_challengeTests.swift */,
+				729AA7B226098340008D7C8D /* Info.plist */,
+				729AA7BA26098369008D7C8D /* BanksListViewModelSpec.swift */,
+				729AA7BE260983A2008D7C8D /* MockBanksService.swift */,
+			);
+			path = ahmed_chebbi_ios_challengeTests;
+			sourceTree = "<group>";
+		};
 		C8E5987E932E181D7897CB0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +285,24 @@
 			productReference = 729AA6F126093387008D7C8D /* ahmed_chebbi_ios_challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		729AA7AD26098340008D7C8D /* ahmed_chebbi_ios_challengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 729AA7B526098340008D7C8D /* Build configuration list for PBXNativeTarget "ahmed_chebbi_ios_challengeTests" */;
+			buildPhases = (
+				729AA7AA26098340008D7C8D /* Sources */,
+				729AA7AB26098340008D7C8D /* Frameworks */,
+				729AA7AC26098340008D7C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				729AA7B426098340008D7C8D /* PBXTargetDependency */,
+			);
+			name = ahmed_chebbi_ios_challengeTests;
+			productName = ahmed_chebbi_ios_challengeTests;
+			productReference = 729AA7AE26098340008D7C8D /* ahmed_chebbi_ios_challengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,6 +314,10 @@
 				TargetAttributes = {
 					729AA6F026093387008D7C8D = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					729AA7AD26098340008D7C8D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 729AA6F026093387008D7C8D;
 					};
 				};
 			};
@@ -276,6 +336,7 @@
 			projectRoot = "";
 			targets = (
 				729AA6F026093387008D7C8D /* ahmed_chebbi_ios_challenge */,
+				729AA7AD26098340008D7C8D /* ahmed_chebbi_ios_challengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +348,15 @@
 			files = (
 				729AA70426093388008D7C8D /* LaunchScreen.storyboard in Resources */,
 				729AA794260976BE008D7C8D /* Localizable.strings in Resources */,
+				729AA7CC2609EA87008D7C8D /* README.md in Resources */,
 				729AA70126093388008D7C8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729AA7AC26098340008D7C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +387,6 @@
 				729AA73F26093BEF008D7C8D /* ManagerBanksService.swift in Sources */,
 				729AA75F26094B29008D7C8D /* String+Extention.swift in Sources */,
 				729AA733260938F5008D7C8D /* Form.swift in Sources */,
-				729AA6FF26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld in Sources */,
 				729AA77E260964FF008D7C8D /* BankViewModel.swift in Sources */,
 				729AA76926094C05008D7C8D /* BanksListCoordinator.swift in Sources */,
 				729AA73926093997008D7C8D /* Payment.swift in Sources */,
@@ -327,7 +395,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		729AA7AA26098340008D7C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729AA7B126098340008D7C8D /* ahmed_chebbi_ios_challengeTests.swift in Sources */,
+				729AA7BF260983A2008D7C8D /* MockBanksService.swift in Sources */,
+				729AA7BB26098369008D7C8D /* BanksListViewModelSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		729AA7B426098340008D7C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 729AA6F026093387008D7C8D /* ahmed_chebbi_ios_challenge */;
+			targetProxy = 729AA7B326098340008D7C8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		729AA70226093388008D7C8D /* LaunchScreen.storyboard */ = {
@@ -508,6 +594,48 @@
 			};
 			name = Release;
 		};
+		729AA7B626098340008D7C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6BXQD5FU;
+				INFOPLIST_FILE = ahmed_chebbi_ios_challengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.ahmed-chebbi-ios-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ahmed_chebbi_ios_challenge.app/ahmed_chebbi_ios_challenge";
+			};
+			name = Debug;
+		};
+		729AA7B726098340008D7C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A6BXQD5FU;
+				INFOPLIST_FILE = ahmed_chebbi_ios_challengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.ahmed-chebbi-ios-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ahmed_chebbi_ios_challenge.app/ahmed_chebbi_ios_challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,20 +657,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		729AA6FD26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				729AA6FE26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodel */,
+		729AA7B526098340008D7C8D /* Build configuration list for PBXNativeTarget "ahmed_chebbi_ios_challengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729AA7B626098340008D7C8D /* Debug */,
+				729AA7B726098340008D7C8D /* Release */,
 			);
-			currentVersion = 729AA6FE26093387008D7C8D /* ahmed_chebbi_ios_challenge.xcdatamodel */;
-			path = ahmed_chebbi_ios_challenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End XCVersionGroup section */
+/* End XCConfigurationList section */
 	};
 	rootObject = 729AA6E926093387008D7C8D /* Project object */;
 }

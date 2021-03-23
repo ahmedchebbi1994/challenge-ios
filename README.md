@@ -1,5 +1,31 @@
 # iOS Challenge
 
+###  Language : Swift 5
+###  iOS Deployment target 12.1
+###  Design Pattern : MVVM-C (Model View ViewModel Coordinator)
+###  **Dark** & **Light** Mode available
+###  Multi Language (Français & Anglais)
+###  Unit Test
+###  Bank List : 
+##### set the current user local country section on top
+
+
+# ScreenShot Demo iOS App 
+
+##  Light Mode
+
+<p align="center">
+<a href="https://ibb.co/dL6YqmX"><img src="https://i.ibb.co/k90Cfmz/IMG-3021.png" alt="IMG-3021" border="0"  width="200"  width="100" ></a>
+</p>
+
+##  Dark Mode
+
+<p align="center">
+<a href="https://ibb.co/MPGs1r9"><img src="https://i.ibb.co/MPGs1r9/IMG-3022.png" alt="IMG-3022" border="0" width="200"  width="100"></a>
+</p>
+
+
+
 ## Coding Test
 
 #### *Brief*

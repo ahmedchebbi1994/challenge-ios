@@ -11,7 +11,7 @@ struct ResourceViewModel {
     private let code: CountryCode
     
     var displayCountryName: String {
-        let countryName = "\(Wording["country_\(code.rawValue)"])"
+        let countryName = "# \(Wording["country_\(code.rawValue)"])"
         var flag = ""
         switch code {
         case .de:

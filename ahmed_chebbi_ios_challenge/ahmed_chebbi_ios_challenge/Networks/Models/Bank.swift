@@ -16,7 +16,7 @@ struct Bank: Codable {
     let primaryColor, secondaryColor: String?
     let logoURL: String?
     let deeplinkIos, deeplinkAndroid: String?
-    let transferEnabled, paymentEnabled: Bool
+    let transferEnabled, paymentEnabled: Bool?
     let form: [Form]?
     let authenticationType: String?
     let parentName: String?
