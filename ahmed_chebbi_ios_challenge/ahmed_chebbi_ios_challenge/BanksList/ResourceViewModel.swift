@@ -7,39 +7,41 @@
 
 struct ResourceViewModel {
     
-    private let banks: [ParentBank]
-    private let code: CountryCode
+    private let resource: Resource
     
     var displayCountryName: String {
-        let countryName = "# \(Wording["country_\(code.rawValue)"])"
-        var flag = ""
-        switch code {
-        case .de:
-            flag = " 🇩🇪"
-        case .fr:
-            flag = " 🇫🇷"
-        case .gb:
-            flag = " 🇬🇧"
-        case .es:
-            flag = " 🇪🇸"
-        case .nl:
-            flag = " 🇳🇱"
+        if let code = resource.countryCode {
+            let countryName = "# \(Wording["country_\(code.rawValue)"])"
+            var flag = ""
+            switch code {
+            case .de:
+                flag = " 🇩🇪"
+            case .fr:
+                flag = " 🇫🇷"
+            case .gb:
+                flag = " 🇬🇧"
+            case .es:
+                flag = " 🇪🇸"
+            case .nl:
+                flag = " 🇳🇱"
+            }
+            return countryName + flag
         }
-        return countryName + flag
+        return ""
     }
     
  
     var displayCountryCode: String {
-        return code.rawValue.uppercased()
+        return resource.countryCode?.rawValue.uppercased() ?? ""
     }
     
     var displayBanksCount: Int {
-        return banks.count
+        return resource.parentBanks?.count ?? 0
     }
     
     var displayBanks: [BankViewModel] {
         var banksViewModel: [BankViewModel] = []
-        banks.forEach { (parentBank) in
+        resource.parentBanks?.forEach { (parentBank) in
             parentBank.banks?.forEach({ (bank) in
                 banksViewModel.append(BankViewModel(bank: bank))
             })
@@ -48,8 +50,7 @@ struct ResourceViewModel {
     }
     
     
-    init(code: CountryCode ,bank: [ParentBank]) {
-        self.banks = bank
-        self.code = code
+    init(resource: Resource) {
+        self.resource = resource
     }
 }

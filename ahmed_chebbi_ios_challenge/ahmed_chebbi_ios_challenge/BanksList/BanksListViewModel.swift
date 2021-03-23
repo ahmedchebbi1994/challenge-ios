@@ -28,9 +28,7 @@ struct BanksListViewModel {
         service.fetchAllBanks(path: nil) { (resources) in
             var data: [ResourceViewModel] = []
             resources.forEach { (resource) in
-                if let code = resource.countryCode, let parentBanks = resource.parentBanks {
-                    data.append(ResourceViewModel(code: code, bank: parentBanks))
-                }
+                data.append(ResourceViewModel(resource: resource))
             }
             completion(data)
         }
