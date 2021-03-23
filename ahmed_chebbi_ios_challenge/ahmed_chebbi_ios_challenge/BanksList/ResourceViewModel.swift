@@ -7,35 +7,42 @@
 
 struct ResourceViewModel {
     
-     let banks: [ParentBank]
+    private let banks: [ParentBank]
     private let code: CountryCode
     //Currently we only support banks from FR, GB, DE, ES and NL.
     
     var displayCountryName: String {
         switch code {
         case .de:
-            return "Allemagne"
+            return "Allemagne 🇩🇪"
         case .fr:
-            return "France"
+            return "France 🇫🇷"
         case .gb:
-            return "Royaume-Uni"
+            return "Royaume-Uni 🇬🇧"
         case .es:
-            return "Espagne"
+            return "Espagne 🇪🇸"
         case .nl:
-            return "Royaume des Pays-Bas"
+            return "Royaume des Pays-Bas 🇳🇱"
         }
     }
     
-    var displayNumbersOfBanks: String {
-        return "\(banks.count) banks"
-    }
-    
+ 
     var displayCountryCode: String {
         return code.rawValue.uppercased()
     }
     
     var displayBanksCount: Int {
         return banks.count
+    }
+    
+    var displayBanks: [BankViewModel] {
+        var banksViewModel: [BankViewModel] = []
+        banks.forEach { (parentBank) in
+            parentBank.banks?.forEach({ (bank) in
+                banksViewModel.append(BankViewModel(bank: bank))
+            })
+        }
+        return banksViewModel
     }
     
     

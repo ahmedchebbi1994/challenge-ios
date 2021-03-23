@@ -38,15 +38,6 @@ class GeneralCell: UITableViewCell {
     }()
     
  
-    private(set) lazy var secondTitle: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.textColor = .corporateLightGray
-        label.numberOfLines = 0
-        return label
-    }()
-    
     private(set) lazy var thirdLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -76,25 +67,13 @@ class GeneralCell: UITableViewCell {
     
     private(set) lazy var profileIMGView: UIImageView = {
         
-        let v = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
+        let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = #colorLiteral(red: 0.8102728417, green: 0.4134489992, blue: 0.3779781005, alpha: 1)
         v.clipsToBounds = true
-        v.layer.cornerRadius = v.frame.size.width/2
+        v.contentMode = .scaleAspectFit
         return v
     }()
     
-    private(set) lazy var profileLblIMGView: UITextField = {
-        let label = UITextField()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.textColor = .corporateBlack
-        label.text = "AB"
-        label.font = UIFont.boldSystemFont(ofSize: 30)
-        label.clipsToBounds = true
-        label.isEnabled = false
-        return label
-    }()
     
     var profileConstraintWidth: NSLayoutConstraint?
     var profileConstraintHeight: NSLayoutConstraint?
@@ -124,11 +103,7 @@ class GeneralCell: UITableViewCell {
     // MARK: - Constraints
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            profileLblIMGView.leadingAnchor.constraint(equalTo: self.profileIMGView.leadingAnchor, constant: 1),
-            profileLblIMGView.topAnchor.constraint(equalTo: self.profileIMGView.topAnchor, constant: 1),
-            profileLblIMGView.trailingAnchor.constraint(equalTo: self.profileIMGView.trailingAnchor, constant: -1),
-            profileLblIMGView.bottomAnchor.constraint(equalTo: self.profileIMGView.bottomAnchor, constant: -1),
-            
+
             profileIMGView.leadingAnchor.constraint(equalTo: self.profileView.leadingAnchor, constant: 2),
             profileIMGView.topAnchor.constraint(equalTo: self.profileView.topAnchor, constant: 2),
             profileIMGView.trailingAnchor.constraint(equalTo: self.profileView.trailingAnchor, constant: -2),
@@ -173,10 +148,8 @@ class GeneralCell: UITableViewCell {
     // MARK: - Install UI
     func setupUI() {
         stackViewName.addArrangedSubview(firstTitle)
-        stackViewName.addArrangedSubview(secondTitle)
         stackViewName.addArrangedSubview(thirdLabel)
 
-        profileIMGView.addSubview(profileLblIMGView)
         profileView.addSubview(profileIMGView)
         
         mainStackView.addArrangedSubview(profileView)

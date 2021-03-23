@@ -17,7 +17,6 @@ final class BanksListViewController: BindableViewController<BanksListView, Banks
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .corporateWhite
-        title = "Banks"
         viewModel.fetchAllBanks { (data) in
             self.dataResources = data
             DispatchQueue.main.async {
@@ -27,16 +26,11 @@ final class BanksListViewController: BindableViewController<BanksListView, Banks
     }
     
     
- 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       
-        
-    }
-    
     func bindViewModel() {
         layout.tableView.delegate = self
         layout.tableView.dataSource = self
+        title = "Banks"
+
     }
  
 }
@@ -51,9 +45,13 @@ extension BanksListViewController: UITableViewDelegate, UITableViewDataSource {
         dataResources.count
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        dataResources[section].displayCountryName 
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let mycell = tableView.dequeueReusableCell(withIdentifier: BankCell.identifier, for: indexPath) as? BankCell {
-            let viewModel = dataResources[0]
+            let viewModel = dataResources[indexPath.section].displayBanks[indexPath.row]
             mycell.bind(to: viewModel)
             return mycell
         }

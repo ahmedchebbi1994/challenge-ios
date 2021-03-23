@@ -12,15 +12,38 @@ final class BankCell: GeneralCell {
     // MARK: - Property
     static let identifier = "BankCell"
     
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.firstTitle.text = nil
+        self.profileIMGView.image = nil
+    }
  
     
     // MARK: - Bind ViewModel
-    func bind(to viewModel: ResourceViewModel){
-        firstTitle.text = viewModel.displayCountryName
-        secondTitle.text = viewModel.displayNumbersOfBanks
-        profileLblIMGView.text = viewModel.displayCountryCode
+    func bind(to viewModel: BankViewModel){
+        firstTitle.text = viewModel.displayBankName
+        let urlPath = viewModel.displayLogUrl
+        if urlPath.isEmpty {
+            self.profileIMGView.image = UIImage(named: "country")
+        } else {
+            if let url = URL(string: urlPath) {
+                MTAPIClient.downloadImage(url: url) { (image, err) in
+                    if err == nil {
+                        if let image = image {
+                            DispatchQueue.main.async {
+                                self.profileIMGView.image = image
+                            }
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.profileIMGView.image = UIImage(named: "country")
+                        }
+                    }
+                }
+            }
+        }
         
-        profileIMGView.image = UIImage(named: "country")
     }
     
 }

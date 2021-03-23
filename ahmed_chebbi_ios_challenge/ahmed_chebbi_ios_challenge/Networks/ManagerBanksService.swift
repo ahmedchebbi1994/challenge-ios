@@ -39,6 +39,7 @@ final class ManagerBanksService: ApiService, BanksServiceProtocol {
         let params = [
             Path.QueryData.clientId.rawValue : Path.QueryData.clientIdValue.rawValue,
             Path.QueryData.clientSecret.rawValue : Path.QueryData.clientSecretValue.rawValue,
+            Path.QueryData.limit.rawValue : "100"
         ]
         var banksList: String = Path.BaseUrl.path.rawValue + Path.BaseUrl.subPath.rawValue
         if let path = path {
