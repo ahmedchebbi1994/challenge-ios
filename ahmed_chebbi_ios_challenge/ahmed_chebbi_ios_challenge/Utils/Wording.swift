@@ -12,7 +12,7 @@ enum Wording {
     // ==========================
 
     static let currentLocalization = Bundle.main.preferredLocalizations.first ?? "(unknown)"
-
+    static let currentRegion = Locale.current.regionCode
 
     static subscript(_ key: String) -> String {
         return NSLocalizedString(key, comment: "")

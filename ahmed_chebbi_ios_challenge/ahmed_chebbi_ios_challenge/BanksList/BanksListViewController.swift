@@ -17,20 +17,39 @@ final class BanksListViewController: BindableViewController<BanksListView, Banks
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .corporateWhite
-        viewModel.fetchAllBanks { (data) in
-            self.dataResources = data
-            DispatchQueue.main.async {
-                self.layout.tableView.reloadData()
-            }
-        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
     
     func bindViewModel() {
         layout.tableView.delegate = self
         layout.tableView.dataSource = self
         title = "Banks"
-
+    }
+    
+    private func loadData(){
+        layout.equip(with: [.disableUserInteraction,.activityIndicator])
+        viewModel.fetchAllBanks { (data) in
+            
+            self.dataResources = data
+            //Check if Current region "resource" exist
+            let currentRegionResource = (data.filter { $0.displayCountryCode == Wording.currentRegion }).first
+            if let currentRegionResource = currentRegionResource {
+                self.dataResources.removeAll { $0.displayCountryCode ==  Wording.currentRegion}
+                self.dataResources.insert(currentRegionResource, at: 0)
+            }
+            self.reloadTableView()
+        }
+    }
+    
+    private func reloadTableView(){
+        DispatchQueue.main.async {
+            self.layout.unEquip()
+            self.layout.tableView.reloadData()
+        }
     }
  
 }
