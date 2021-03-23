@@ -9,21 +9,23 @@ struct ResourceViewModel {
     
     private let banks: [ParentBank]
     private let code: CountryCode
-    //Currently we only support banks from FR, GB, DE, ES and NL.
     
     var displayCountryName: String {
+        let countryName = "\(Wording["country_\(code.rawValue)"])"
+        var flag = ""
         switch code {
         case .de:
-            return "Allemagne 🇩🇪"
+            flag = " 🇩🇪"
         case .fr:
-            return "France 🇫🇷"
+            flag = " 🇫🇷"
         case .gb:
-            return "Royaume-Uni 🇬🇧"
+            flag = " 🇬🇧"
         case .es:
-            return "Espagne 🇪🇸"
+            flag = " 🇪🇸"
         case .nl:
-            return "Royaume des Pays-Bas 🇳🇱"
+            flag = " 🇳🇱"
         }
+        return countryName + flag
     }
     
  

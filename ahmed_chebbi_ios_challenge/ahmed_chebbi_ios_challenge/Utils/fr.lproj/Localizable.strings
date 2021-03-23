@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  ahmed_chebbi_ios_challenge
+
+  Created by Chebbi on 23/03/2021.
+  
+*/
+"country_FR" = "France";
+
+"country_GB" = "Royaume-Uni";
+
+"country_DE" = "Allemagne";
+
+"country_ES" = "Espagne";
+
+"coutnry_NL" = "Royaume des Pays-Bas";

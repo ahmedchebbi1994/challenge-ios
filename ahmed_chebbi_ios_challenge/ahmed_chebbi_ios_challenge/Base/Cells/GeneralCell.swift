@@ -132,7 +132,7 @@ class GeneralCell: UITableViewCell {
     // MARK: - configUI
     func configUI() {
         mainView.layer.cornerRadius = 10
-        mainView.backgroundColor = UIColor.corporateLightGray.withAlphaComponent(0.1)
+        mainView.backgroundColor = UIColor.corporateWhite.withAlphaComponent(0.1)
         selectionStyle = .none
     }
     

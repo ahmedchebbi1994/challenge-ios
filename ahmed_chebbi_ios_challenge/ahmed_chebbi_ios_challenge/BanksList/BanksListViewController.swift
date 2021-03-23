@@ -40,6 +40,9 @@ extension BanksListViewController: UITableViewDelegate, UITableViewDataSource {
         dataResources[section].displayBanksCount
     }
         
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        60.0
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         dataResources.count
